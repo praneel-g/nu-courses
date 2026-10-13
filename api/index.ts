@@ -1,6 +1,5 @@
 import { Hono } from "hono";
 import { cors } from "hono/middleware";
-import { serve } from "http-server";
 import { coursesRouter } from "./courses.ts";
 import { searchRouter } from "./search.ts";
 import { sectionsRouter } from "./sections.ts";
@@ -15,4 +14,5 @@ app.route("/courses", coursesRouter);
 app.route("/search", searchRouter);
 app.route("/sections", sectionsRouter);
 
-serve(app.fetch, { port: 8000 });
+// Deno.serve is built in; hosts such as Deno Deploy may pass the port in PORT.
+Deno.serve({ port: Number(Deno.env.get("PORT") ?? 8000) }, app.fetch);
