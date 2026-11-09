@@ -37,7 +37,7 @@ This project is meant to get course data for [ninest/husker](https://github.com/
 
 ## Build Setup
 
-First, [install Deno](https://deno.land/manual/getting_started/installation). Clone or fork the repository, then do the following.
+First, [install Deno](https://docs.deno.com/runtime/getting_started/installation/). Clone or fork the repository, then do the following.
 
 ### 1. Constants
 
